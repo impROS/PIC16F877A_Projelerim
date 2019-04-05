@@ -1,0 +1,3 @@
+Warning[205] D:\PROJE_ASM\8_LED.X\SEKIZ_LED.ASM 1 : Found directive in column 1. (list)
+Message[301] C:\PROGRAM FILES (X86)\MICROCHIP\MPLABX\V3.40\MPASMX\P16F877.INC 34 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Message[302] D:\PROJE_ASM\8_LED.X\SEKIZ_LED.ASM 14 : Register in operand not in bank 0.  Ensure that bank bits are correct.

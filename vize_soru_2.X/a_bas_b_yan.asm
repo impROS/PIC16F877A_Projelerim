@@ -1,0 +1,45 @@
+LIST P=16F877A
+    #INCLUDE <P16F877A.INC>
+    
+    SAY1 EQU 0X020
+    SAY2 EQU 0X021
+    SAYAC_BUTON EQU 0X021
+ 
+    ORG 0X00
+ 
+    BANKSEL TRISA
+    CLRF TRISA
+    
+BANKSEL PORTA
+    CLRF PORTA
+    BSF PORTA,5
+;TEST_ET:BSF PORTA,5
+;    GOTO  TEST_ET
+;    GOTO LED_YAK
+;    LED_YAK
+;    
+;    BANKSEL TRISB
+;    CLRF TRISB
+;    BANKSEL PORTB
+;    CLRF PORTB
+;    MOVLW .8
+;    MOVWF PORTB
+    
+    GOTO $
+ 
+    DELAY
+    MOVLW .255
+    MOVWF SAY1
+    
+    MOVLW .255
+    MOVWF SAY2
+    
+    DECFSZ SAY2,f
+    GOTO $-1
+    DECFSZ SAY1,f
+    GOTO $-5
+    RETURN
+    END
+    
+ 
+ 

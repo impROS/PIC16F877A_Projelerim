@@ -1,0 +1,12 @@
+Warning[205] D:\PROJE_ASM\TRAFIK_LAMBASI.X\TRAFIK_LAMBASI.ASM 1 : Found directive in column 1. (LIST)
+Warning[207] D:\PROJE_ASM\TRAFIK_LAMBASI.X\TRAFIK_LAMBASI.ASM 4 : Found label after column 1. (SAY1)
+Warning[207] D:\PROJE_ASM\TRAFIK_LAMBASI.X\TRAFIK_LAMBASI.ASM 5 : Found label after column 1. (SAY2)
+Warning[207] D:\PROJE_ASM\TRAFIK_LAMBASI.X\TRAFIK_LAMBASI.ASM 7 : Found label after column 1. (SAY_1)
+Warning[207] D:\PROJE_ASM\TRAFIK_LAMBASI.X\TRAFIK_LAMBASI.ASM 8 : Found label after column 1. (SAY_2)
+Warning[207] D:\PROJE_ASM\TRAFIK_LAMBASI.X\TRAFIK_LAMBASI.ASM 9 : Found label after column 1. (SAY_3)
+Warning[207] D:\PROJE_ASM\TRAFIK_LAMBASI.X\TRAFIK_LAMBASI.ASM 11 : Found label after column 1. (SARI)
+Warning[207] D:\PROJE_ASM\TRAFIK_LAMBASI.X\TRAFIK_LAMBASI.ASM 12 : Found label after column 1. (KIRMIZI)
+Warning[207] D:\PROJE_ASM\TRAFIK_LAMBASI.X\TRAFIK_LAMBASI.ASM 13 : Found label after column 1. (YESIL)
+Message[302] D:\PROJE_ASM\TRAFIK_LAMBASI.X\TRAFIK_LAMBASI.ASM 19 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] D:\PROJE_ASM\TRAFIK_LAMBASI.X\TRAFIK_LAMBASI.ASM 60 : Found label after column 1. (GECIK_SARI)
+Warning[207] D:\PROJE_ASM\TRAFIK_LAMBASI.X\TRAFIK_LAMBASI.ASM 79 : Found label after column 1. (GECIK_KIRMIZI)

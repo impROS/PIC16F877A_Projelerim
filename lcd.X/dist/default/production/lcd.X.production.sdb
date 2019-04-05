@@ -1,0 +1,85 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"44 D:\proje_asm\lcd.X\lcd.c
+[v _main main `(v  1 e 1 0 ]
+"57
+[v _delay_ms delay_ms `(v  1 e 1 0 ]
+"65
+[v _load load `(v  1 e 1 0 ]
+"75
+[v _tonghop tonghop `(v  1 e 1 0 ]
+"268 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic16f877a.h
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+[s S27 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"285
+[u S36 . 1 `S27 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES36  1 e 1 @7 ]
+"329
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"1396
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1457
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"19 D:\proje_asm\lcd.X\lcd.c
+[v _khung_du_lieu khung_du_lieu `[32]uc  1 e 32 0 ]
+"20
+[v _socot socot `uc  1 e 1 0 ]
+[v _sohang sohang `uc  1 e 1 0 ]
+[v _tocdo tocdo `uc  1 e 1 0 ]
+"21
+[v _g g `uc  1 e 1 0 ]
+[v _h h `uc  1 e 1 0 ]
+[v _a a `uc  1 e 1 0 ]
+"24
+[v _codedu_lieu_cot codedu_lieu_cot `DCC[483]uc  1 e 483 0 ]
+"44
+[v _main main `(v  1 e 1 0 ]
+{
+"54
+} 0
+"75
+[v _tonghop tonghop `(v  1 e 1 0 ]
+{
+"77
+[v tonghop@i i `uc  1 a 1 8 ]
+"105
+} 0
+"65
+[v _load load `(v  1 e 1 0 ]
+{
+"67
+[v load@i i `uc  1 a 1 3 ]
+"65
+[v load@u u `ui  1 p 2 0 ]
+"73
+} 0
+"57
+[v _delay_ms delay_ms `(v  1 e 1 0 ]
+{
+"59
+[v delay_ms@i i `ui  1 a 2 3 ]
+"60
+[v delay_ms@j j `uc  1 a 1 5 ]
+"57
+[v delay_ms@ms ms `ui  1 p 2 0 ]
+"63
+} 0

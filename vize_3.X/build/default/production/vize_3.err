@@ -1,0 +1,5 @@
+Warning[205] D:\PROJE_ASM\VIZE_3.X\VIZE_3.ASM 1 : Found directive in column 1. (list)
+Warning[207] D:\PROJE_ASM\VIZE_3.X\VIZE_3.ASM 4 : Found label after column 1. (SAYAC1)
+Warning[207] D:\PROJE_ASM\VIZE_3.X\VIZE_3.ASM 5 : Found label after column 1. (SAYAC2)
+Warning[207] D:\PROJE_ASM\VIZE_3.X\VIZE_3.ASM 6 : Found label after column 1. (SAYAC3)
+Message[302] D:\PROJE_ASM\VIZE_3.X\VIZE_3.ASM 9 : Register in operand not in bank 0.  Ensure that bank bits are correct.

@@ -1,0 +1,11 @@
+Warning[205] D:\PROJE_ASM\KETTLE_DENEME.X\KETTLE_BEKLE.ASM 1 : Found directive in column 1. (LIST)
+Warning[207] D:\PROJE_ASM\KETTLE_DENEME.X\KETTLE_BEKLE.ASM 4 : Found label after column 1. (SAY1)
+Warning[207] D:\PROJE_ASM\KETTLE_DENEME.X\KETTLE_BEKLE.ASM 5 : Found label after column 1. (SAY2)
+Warning[207] D:\PROJE_ASM\KETTLE_DENEME.X\KETTLE_BEKLE.ASM 7 : Found label after column 1. (SAY_1)
+Warning[207] D:\PROJE_ASM\KETTLE_DENEME.X\KETTLE_BEKLE.ASM 8 : Found label after column 1. (SAY_2)
+Warning[207] D:\PROJE_ASM\KETTLE_DENEME.X\KETTLE_BEKLE.ASM 9 : Found label after column 1. (SAY_3)
+Warning[207] D:\PROJE_ASM\KETTLE_DENEME.X\KETTLE_BEKLE.ASM 11 : Found label after column 1. (KIRMIZI)
+Message[302] D:\PROJE_ASM\KETTLE_DENEME.X\KETTLE_BEKLE.ASM 18 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] D:\PROJE_ASM\KETTLE_DENEME.X\KETTLE_BEKLE.ASM 43 : Found label after column 1. (E_0)
+Warning[207] D:\PROJE_ASM\KETTLE_DENEME.X\KETTLE_BEKLE.ASM 46 : Found label after column 1. (E_1)
+Warning[207] D:\PROJE_ASM\KETTLE_DENEME.X\KETTLE_BEKLE.ASM 48 : Found label after column 1. (E_2)

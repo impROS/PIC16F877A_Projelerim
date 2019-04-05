@@ -1,0 +1,62 @@
+;STANDART TANIMLAMALAR
+    list p=16f877a
+    INCLUDE<P16F877A.INC>
+    DENEME EQU 0X020
+    SAY1 EQU 0X021
+    SAY2 EQU 0X022
+    ORG 0X00
+
+    
+    BANKSEL TRISA
+    CLRF TRISA
+     
+    BANKSEL PORTA
+    CLRF PORTA
+    
+    BANKSEL TRISB
+    CLRF TRISB
+     
+    BANKSEL PORTB
+    CLRF PORTB
+    MOVLW .2
+    MOVWF PORTB
+    
+    MOVFW PORTB
+    MOVWF DENEME
+    MOVLW .2
+    XORWF DENEME,F
+    INCF DENEME,F
+    DECFSZ DENEME
+    GOTO SON
+    GOTO YAK
+    
+YAK:
+      BANKSEL PORTA
+    BSF PORTA,3
+    GOTO $
+     
+SON:
+      BANKSEL PORTA
+    BCF PORTA,3
+    GOTO $
+   
+    
+    
+    
+    
+    ;ZAMANLAYICI
+DELAY:
+    MOVLW .255
+    MOVWF SAY1
+    
+    MOVLW .255
+    MOVFW SAY2
+    
+    DECFSZ SAY2
+    GOTO $-1
+    DECFSZ SAY1
+    GOTO $-5
+    RETURN
+    END   
+
+

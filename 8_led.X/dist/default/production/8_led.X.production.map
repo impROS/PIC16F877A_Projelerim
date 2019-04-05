@@ -1,0 +1,42 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Sat Dec 03 20:34:49 2016
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x00002c
+                   .cinit    romdata   0x000016    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/SEKIZ_L       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000017      
+                            0x002007    0x002007      
+            25 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000001    program     static D:\proje_asm\8_led.X\sekiz_led.asm
+                       j1   0x000006    program     static D:\proje_asm\8_led.X\sekiz_led.asm
+                       z0   0x00000f    program     static D:\proje_asm\8_led.X\sekiz_led.asm
+                       z1   0x000011    program     static D:\proje_asm\8_led.X\sekiz_led.asm
+                    zaman   0x00000d    program     static D:\proje_asm\8_led.X\sekiz_led.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000001    program     static D:\proje_asm\8_led.X\sekiz_led.asm
+                       j1   0x000006    program     static D:\proje_asm\8_led.X\sekiz_led.asm
+                    zaman   0x00000d    program     static D:\proje_asm\8_led.X\sekiz_led.asm
+                       z0   0x00000f    program     static D:\proje_asm\8_led.X\sekiz_led.asm
+                       z1   0x000011    program     static D:\proje_asm\8_led.X\sekiz_led.asm
+
+

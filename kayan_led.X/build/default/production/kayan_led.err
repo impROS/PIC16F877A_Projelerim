@@ -1,0 +1,6 @@
+Warning[205] D:\PROJE_ASM\KAYAN_LED.X\KAYAN_LED.ASM 1 : Found directive in column 1. (list)
+Warning[205] D:\PROJE_ASM\KAYAN_LED.X\KAYAN_LED.ASM 3 : Found directive in column 1. (__config)
+Warning[207] D:\PROJE_ASM\KAYAN_LED.X\KAYAN_LED.ASM 13 : Found label after column 1. (ANAPROGRAM)
+Message[302] D:\PROJE_ASM\KAYAN_LED.X\KAYAN_LED.ASM 20 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\PROJE_ASM\KAYAN_LED.X\KAYAN_LED.ASM 28 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] D:\PROJE_ASM\KAYAN_LED.X\KAYAN_LED.ASM 30 : Found label after column 1. (DONGU)

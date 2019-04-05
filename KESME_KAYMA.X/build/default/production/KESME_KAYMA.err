@@ -1,0 +1,16 @@
+Warning[205] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 1 : Found directive in column 1. (list)
+Warning[205] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 3 : Found directive in column 1. (__config)
+Warning[207] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 4 : Found label after column 1. (SAY1)
+Warning[207] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 5 : Found label after column 1. (SAY2)
+Warning[205] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 6 : Found directive in column 1. (org)
+Warning[205] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 8 : Found directive in column 1. (org)
+Warning[205] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 11 : Found directive in column 1. (banksel)
+Warning[203] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 15 : Found opcode in column 1. (retfie)
+Warning[205] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 19 : Found directive in column 1. (banksel)
+Warning[205] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 24 : Found directive in column 1. (banksel)
+Message[302] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 26 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 30 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[205] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 32 : Found directive in column 1. (banksel)
+Message[302] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 34 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 47 : Using default destination of 1 (file).
+Message[305] D:\PROJE_ASM\KESME_KAYMA.X\KESME_KAYMA.ASM 49 : Using default destination of 1 (file).

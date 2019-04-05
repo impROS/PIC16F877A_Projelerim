@@ -1,0 +1,48 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Thu Nov 10 06:10:06 2016
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x00004a
+                   .cinit    romdata   0x000025    program   0x000004
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000026      
+            39 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                       D2   0x000006    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+                       D3   0x000009    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+                    DELAY   0x000018    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+                     LOOP   0x00001e    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+                      SON   0x00000d    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+                      YAK   0x00000b    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+                       Z0   0x000011    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+                       Z1   0x000013    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+              ZAMANLAYICI   0x00000f    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                       D2   0x000006    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+                       D3   0x000009    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+                      YAK   0x00000b    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+                      SON   0x00000d    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+              ZAMANLAYICI   0x00000f    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+                       Z0   0x000011    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+                       Z1   0x000013    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+                    DELAY   0x000018    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+                     LOOP   0x00001e    program     static D:\proje_asm\bcf_bsf_deneme.X\bcf_bsf_deneme.asm
+
+

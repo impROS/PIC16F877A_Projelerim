@@ -1,0 +1,7 @@
+Warning[205] D:\PROJE_ASM\BCF_BSF_DENEME.X\BCF_BSF_DENEME.ASM 1 : Found directive in column 1. (LIST)
+Warning[207] D:\PROJE_ASM\BCF_BSF_DENEME.X\BCF_BSF_DENEME.ASM 3 : Found label after column 1. (SAY1)
+Warning[207] D:\PROJE_ASM\BCF_BSF_DENEME.X\BCF_BSF_DENEME.ASM 4 : Found label after column 1. (SAY2)
+Warning[207] D:\PROJE_ASM\BCF_BSF_DENEME.X\BCF_BSF_DENEME.ASM 5 : Found label after column 1. (DCounter1)
+Message[302] D:\PROJE_ASM\BCF_BSF_DENEME.X\BCF_BSF_DENEME.ASM 13 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] D:\PROJE_ASM\BCF_BSF_DENEME.X\BCF_BSF_DENEME.ASM 51 : Using default destination of 1 (file).
+Message[305] D:\PROJE_ASM\BCF_BSF_DENEME.X\BCF_BSF_DENEME.ASM 53 : Using default destination of 1 (file).

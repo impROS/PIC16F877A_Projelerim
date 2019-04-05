@@ -1,0 +1,7 @@
+Warning[205] D:\PROJE_ASM\VIZE_SORU_2.X\A_BAS_B_YAN.ASM 1 : Found directive in column 1. (LIST)
+Warning[207] D:\PROJE_ASM\VIZE_SORU_2.X\A_BAS_B_YAN.ASM 4 : Found label after column 1. (SAY1)
+Warning[207] D:\PROJE_ASM\VIZE_SORU_2.X\A_BAS_B_YAN.ASM 5 : Found label after column 1. (SAY2)
+Warning[207] D:\PROJE_ASM\VIZE_SORU_2.X\A_BAS_B_YAN.ASM 6 : Found label after column 1. (SAYAC_BUTON)
+Message[302] D:\PROJE_ASM\VIZE_SORU_2.X\A_BAS_B_YAN.ASM 11 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[205] D:\PROJE_ASM\VIZE_SORU_2.X\A_BAS_B_YAN.ASM 13 : Found directive in column 1. (BANKSEL)
+Warning[207] D:\PROJE_ASM\VIZE_SORU_2.X\A_BAS_B_YAN.ASM 30 : Found label after column 1. (DELAY)

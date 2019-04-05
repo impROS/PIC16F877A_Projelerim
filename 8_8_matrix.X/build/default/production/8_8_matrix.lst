@@ -1,0 +1,612 @@
+MPASM 5.68                    8_8_MATRIX.ASM   12-1-2016  3:12:45         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 
+                      00002 
+Warning[205]: Found directive in column 1. (list)
+                      00003 list p=16f877a
+                      00004                                                                 include<p16f877a.inc>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : May 15 2016
+                      00005 ;  MPASM PIC16F877A processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2016 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+                      00567         LIST
+                      00005 
+                      00006 
+  00000002            00007 PC equ h'02'                                    ;       The program counter will be refered to as PC - T
+                            he program counter is
+                      00008                                                                 ;       a little counter within the micr
+                            ocontroller to let itself know what line number
+                      00009                                                                 ;       it is upto when running a progra
+                            m. We can make the microcontroller jump to a certain
+                      00010                                                                 ;       line number by changing the valu
+                            e stored in PC. (we will do this in a later tutorial)
+                      00011 
+                      00012     cblock h'20'                                ;       Within this cblock and endc, we can define our v
+                            ariables. More info on this, later.
+  00000020            00013         delay_1                                         ;       These next two lines will set aside 1byt
+                            e of ram for delay_1 and 1byte for delay_2
+  00000021            00014         delay_2                                         ;       what we will do with these variables is 
+                            load them with a number each so that we can
+                      00015     endc                                                ;       count down from that number to zero. whe
+                            n we reach zero, we continue with the program!
+                      00016                                                                 ;       more info on these two variables
+                             can be found in the delay routine.
+                      00017 
+                      00018 
+                      00019 
+                      00020     org h'0000'                                 ;       This line just tells the microcontroller what ad
+                            dress to start running our program from.
+                      00021                                                                 ;       It will always be 0000 hex for a
+                            ll the tutorials.
+                      00022 
+                      00023 
+0000   3007           00024     movlw h'07'                                 ;       This will turn the comparators OFF.     
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0001   009C           00025     movwf CMCON                                 ;       (we just want to use the ports as digital ports)
+                      00026 
+                      00027 
+0002   1683           00028     bsf STATUS, RP0                     ;       select bank 1 (to enable us to change the Input / Output
+                             status of our ports)
+0003   3000           00029     movlw b'00000000'                   ;       set PORTB all outputs (A '0' means output, A '1' means i
+MPASM 5.68                    8_8_MATRIX.ASM   12-1-2016  3:12:45         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                            nput. We can set each
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0004   0086           00030     movwf TRISB                                 ;       We can set each bit individualy. Each port havin
+                            g 8-bits or 8 pins.
+0005   3020           00031     movlw b'00100000'                   ;       set PORTA all outputs except for bit 5. Bit 5 is an inpu
+                            t ONLY pin.
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0006   0085           00032     movwf TRISA                                 ;       It cannot be set to an output!
+0007   1283           00033     bcf STATUS, RP0                     ;       select bank 0
+                      00034 
+                      00035 
+                      00036 
+                      00037 
+0008                  00038 setup                                                   ;       I always have a title labeled 'setup' th
+                            is is where we set everything up
+0008   0186           00039     clrf PORTB                                  ;       ensure all LED's are off initially by sending 0'
+                            s to the anodes
+                      00040                                                                 ;       i.e. our variables and flags etc
+                            .. so they are ready for the main program
+                      00041 
+                      00042 
+0009                  00043 begin                                                   ;       This is where our main program starts.
+0009   3000           00044     movlw b'00000000'                   ;       we want to start off at the very right hand side of the 
+                            cathode columns, so we
+000A   0085           00045     movwf PORTA                                 ;       send 000 to PORTA (remember we are concerned wit
+                            h PORTA 0, 1 and 2)
+000B   303C           00046     movlw b'00111100'                   ;       Now that we have our column activated, we send out a byt
+                            e of data to the anodes
+000C   0086           00047     movwf PORTB                                 ;       by placing the data on PORTB
+000D   2???           00048     call delay                                  ;       hold that column on for a short while... and the
+                            n go onto the next column
+000E   0186           00049     clrf PORTB                          ;       This ensures that we don't display the previous columns 
+                            data on the next column.
+000F   3001           00050     movlw b'00000001'                   ;       activate the next column of cathodes in sequence by incr
+                            ementing the data
+0010   0085           00051     movwf PORTA                                 ;       on PORTA (which connects to the 7442)
+0011   3042           00052     movlw b'01000010'                   ;       Now that we have our next column activated, we send out 
+                            the next byte of data to the anodes
+0012   0086           00053     movwf PORTB                                 ;       by placing the data on PORTB
+0013   2???           00054     call delay                                  ;       hold that column on for a short while... and the
+                            n go onto the next column
+0014   0186           00055     clrf PORTB                          ;       This ensures that we don't display the previous columns 
+                            data on the next column.
+0015   3002           00056     movlw b'00000010'                   ;       activate the next column of cathodes in sequence by incr
+                            ementing the data
+0016   0085           00057     movwf PORTA                                 ;       on PORTA (which connects to the 7442)
+0017   30A9           00058     movlw b'10101001'                   ;       Now that we have our next column activated, we send out 
+                            the next byte of data to the anodes
+0018   0086           00059     movwf PORTB                                 ;       by placing the data on PORTB
+0019   2???           00060     call delay                                  ;       hold that column on for a short while... and the
+                            n go onto the next column
+001A   0186           00061     clrf PORTB                          ;       This ensures that we don't display the previous columns 
+                            data on the next column.
+MPASM 5.68                    8_8_MATRIX.ASM   12-1-2016  3:12:45         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+001B   3003           00062     movlw b'00000011'                   ;       activate the next column of cathodes in sequence by incr
+                            ementing the data
+001C   0085           00063     movwf PORTA                                 ;       on PORTA (which connects to the 7442)
+001D   3085           00064     movlw b'10000101'                   ;       Now that we have our next column activated, we send out 
+                            the next byte of data to the anodes
+001E   0086           00065     movwf PORTB                                 ;       by placing the data on PORTB
+001F   2???           00066     call delay                                  ;       hold that column on for a short while... and the
+                            n go onto the next column
+0020   0186           00067     clrf PORTB                          ;       This ensures that we don't display the previous columns 
+                            data on the next column.
+0021   3004           00068     movlw b'00000100'                   ;       activate the next column of cathodes in sequence by incr
+                            ementing the data
+0022   0085           00069     movwf PORTA                                 ;       on PORTA (which connects to the 7442)
+0023   3085           00070     movlw b'10000101'                   ;       Now that we have our next column activated, we send out 
+                            the next byte of data to the anodes
+0024   0086           00071     movwf PORTB                                 ;       by placing the data on PORTB
+0025   2???           00072     call delay                                  ;       hold that column on for a short while... and the
+                            n go onto the next column
+0026   0186           00073     clrf PORTB                          ;       This ensures that we don't display the previous columns 
+                            data on the next column.
+0027   3005           00074     movlw b'00000101'                   ;       activate the next column of cathodes in sequence by incr
+                            ementing the data
+0028   0085           00075     movwf PORTA                                 ;       on PORTA (which connects to the 7442)
+0029   30A9           00076     movlw b'10101001'                   ;       Now that we have our next column activated, we send out 
+                            the next byte of data to the anodes
+002A   0086           00077     movwf PORTB                                 ;       by placing the data on PORTB
+002B   2???           00078     call delay                                  ;       hold that column on for a short while... and the
+                            n go onto the next column
+002C   0186           00079     clrf PORTB                          ;       This ensures that we don't display the previous columns 
+                            data on the next column.
+002D   3006           00080     movlw b'00000110'                   ;       activate the next column of cathodes in sequence by incr
+                            ementing the data
+002E   0085           00081     movwf PORTA                                 ;       on PORTA (which connects to the 7442)
+002F   3042           00082     movlw b'01000010'                   ;       Now that we have our next column activated, we send out 
+                            the next byte of data to the anodes
+0030   0086           00083     movwf PORTB                                 ;       by placing the data on PORTB
+0031   2???           00084     call delay                                  ;       hold that column on for a short while... and the
+                            n go onto the next column
+0032   0186           00085     clrf PORTB                          ;       This ensures that we don't display the previous columns 
+                            data on the next column.
+0033   3007           00086     movlw b'00000111'                   ;       activate the next column of cathodes in sequence by incr
+                            ementing the data
+0034   0085           00087     movwf PORTA                                 ;       on PORTA (which connects to the 7442)
+0035   303C           00088     movlw b'00111100'                   ;       Now that we have our next column activated, we send out 
+                            the next byte of data to the anodes
+0036   0086           00089     movwf PORTB                                 ;       by placing the data on PORTB
+0037   2???           00090     call delay                                  ;       hold that column on for a short while... and the
+                            n go onto the next column
+0038   0186           00091     clrf PORTB                          ;       This ensures that we don't display the previous columns 
+                            data on the next column.
+0039   2???           00092     goto begin                                  ;       and now go and do it all again (it will run in a
+                             continuous loop)
+                      00093 
+MPASM 5.68                    8_8_MATRIX.ASM   12-1-2016  3:12:45         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00094 
+                      00095 
+                      00096 
+                      00097         
+003A                  00098 delay
+003A   30FF           00099     movlw d'255'                                ;       try decreasing this number and see what effect i
+                            t has on the display
+003B   00A0           00100     movwf delay_1                               ;       the number stored in w will now be copied into o
+                            ur two delay variables
+003C   00A1           00101     movwf delay_2                               ;       the higher the number means the longer the delay
+                             time
+003D                  00102 delay_loop                                              ;       We come back to this label when we have 
+                            not yet reached zero.
+003D   0BA0           00103     decfsz delay_1, f                   ;       decrement whatever is in delay_1 by 1 and store the answ
+                            er back in delay_1
+003E   2???           00104     goto delay_loop                     ;       if the answer is not zero, then go back to the delay_loo
+                            p label. but if the
+003F   0BA1           00105     decfsz delay_2, f                   ;       answer is zero then decrement delay_2 by one and store t
+                            he answer in delay_2
+0040   2???           00106     goto delay_loop                     ;       if the answer is not zero, then go back to delay_loop la
+                            bel. but if the answer
+0041   0008           00107     return                                              ;       is zero, then we have completed our dela
+                            y and now we can return to our main program!
+                      00108 
+                      00109 
+                      00110 
+                      00111     end                                                 ;       We always need to have end at the end, e
+                            ven if we don't want the program
+MPASM 5.68                    8_8_MATRIX.ASM   12-1-2016  3:12:45         PAGE  5
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADCS2                             00000006
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BRGH                              00000002
+C                                 00000000
+C1INV                             00000004
+C1OUT                             00000006
+C2INV                             00000005
+C2OUT                             00000007
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1                             00000015
+CCPR1H                            00000016
+CCPR1L                            00000015
+CCPR2                             0000001B
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CHS0                              00000003
+CHS1                              00000004
+CHS2                              00000005
+CIS                               00000003
+CKE                               00000006
+MPASM 5.68                    8_8_MATRIX.ASM   12-1-2016  3:12:45         PAGE  6
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CKP                               00000004
+CM0                               00000000
+CM1                               00000001
+CM2                               00000002
+CMCON                             0000009C
+CMIE                              00000006
+CMIF                              00000006
+CREN                              00000004
+CSRC                              00000007
+CVR0                              00000000
+CVR1                              00000001
+CVR2                              00000002
+CVR3                              00000003
+CVRCON                            0000009D
+CVREN                             00000007
+CVROE                             00000006
+CVRR                              00000005
+D                                 00000005
+DATA_ADDRESS                      00000005
+DC                                00000001
+D_A                               00000005
+D_NOT_A                           00000005
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+F                                 00000001
+FERR                              00000002
+FSR                               00000004
+GCEN                              00000007
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+GO_NOT_DONE                       00000002
+I2C_DATA                          00000005
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+MPASM 5.68                    8_8_MATRIX.ASM   12-1-2016  3:12:45         PAGE  7
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+OBF                               00000006
+OERR                              00000001
+OPTION_REG                        00000081
+P                                 00000004
+PC                                00000002
+PCFG0                             00000000
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PEIE                              00000006
+PEN                               00000002
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+PSPIF                             00000007
+PSPMODE                           00000004
+R                                 00000002
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RA5                               00000005
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+MPASM 5.68                    8_8_MATRIX.ASM   12-1-2016  3:12:45         PAGE  8
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+RC6                               00000006
+RC7                               00000007
+RC8_9                             00000006
+RC9                               00000006
+RCD8                              00000000
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+RD                                00000000
+RD0                               00000000
+RD1                               00000001
+RD2                               00000002
+RD3                               00000003
+RD4                               00000004
+RD5                               00000005
+RD6                               00000006
+RD7                               00000007
+RE0                               00000000
+RE1                               00000001
+RE2                               00000002
+READ_WRITE                        00000002
+RP0                               00000005
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+R_NOT_W                           00000002
+R_W                               00000002
+S                                 00000003
+SEN                               00000000
+SMP                               00000007
+SPBRG                             00000099
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPCON2                           00000091
+MPASM 5.68                    8_8_MATRIX.ASM   12-1-2016  3:12:45         PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+SSPOV                             00000006
+SSPSTAT                           00000094
+STATUS                            00000003
+SYNC                              00000004
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1                              0000000E
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISA5                            00000005
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+MPASM 5.68                    8_8_MATRIX.ASM   12-1-2016  3:12:45         PAGE 10
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TRISC                             00000087
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+TRISC6                            00000006
+TRISC7                            00000007
+TRISD                             00000088
+TRISD0                            00000000
+TRISD1                            00000001
+TRISD2                            00000002
+TRISD3                            00000003
+TRISD4                            00000004
+TRISD5                            00000005
+TRISD6                            00000006
+TRISD7                            00000007
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+TXEN                              00000005
+TXIE                              00000004
+TXIF                              00000004
+TXREG                             00000019
+TXSTA                             00000098
+UA                                00000001
+W                                 00000000
+WCOL                              00000007
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_BOREN_OFF                        00003FBF
+_BOREN_ON                         00003FFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00001FFF
+_CP_OFF                           00003FFF
+MPASM 5.68                    8_8_MATRIX.ASM   12-1-2016  3:12:45         PAGE 11
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_CP_ON                            00001FFF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_1FOURTH                      00003BFF
+_WRT_256                          00003DFF
+_WRT_HALF                         000039FF
+_WRT_OFF                          00003FFF
+_XT_OSC                           00003FFD
+__16F877A                         00000001
+begin                             00000009
+delay                             0000003A
+delay_1                           00000020
+delay_2                           00000021
+delay_loop                        0000003D
+setup                             00000008
+
+Errors   :     0
+Warnings :     1 reported,     0 suppressed
+Messages :     3 reported,     0 suppressed
+
+

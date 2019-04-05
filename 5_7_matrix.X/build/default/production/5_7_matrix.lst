@@ -1,0 +1,820 @@
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[205]: Found directive in column 1. (list)
+                      00001 list p=16f877a
+                      00002     include<p16f877a.inc>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : May 15 2016
+                      00005 ;  MPASM PIC16F877A processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2016 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+                      00567         LIST
+                      00003         
+Warning[207]: Found label after column 1. (SAYAC1)
+  00000020            00004     SAYAC1 equ 0x020
+Warning[207]: Found label after column 1. (SAYAC2)
+  00000021            00005     SAYAC2 equ 0x021
+Warning[207]: Found label after column 1. (SAYAC3)
+  00000022            00006     SAYAC3 equ 0x022
+                      00007     org 0x00
+0000                  00008 _main:
+                      00009 
+                      00010 ;LED_Matrix.c,55 ::             void main() {
+                      00011 ;LED_Matrix.c,56 ::             TRISB = 0b00000000; // Set PORTB direction to be output
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0000   0186           00012     CLRF        TRISB+0 
+                      00013 ;LED_Matrix.c,57 ::             TRISA = 0x00; // Set PORTA direction to be output
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0001   0185           00014     CLRF        TRISA+0 
+                      00015 ;LED_Matrix.c,58 ::             PORTB = 0x00; // Turn OFF LEDs on PORTB
+0002   0186           00016     CLRF        PORTB+0 
+                      00017 ;LED_Matrix.c,59 ::             CMCON = 7 ; // Disable comparators
+0003   3007           00018     MOVLW       7
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0004   009C           00019     MOVWF       CMCON+0 
+                      00020 ;LED_Matrix.c,60 ::             ADCON1 = 0x0F;  // Disable Analog functions
+0005   3015           00021     MOVLW       15
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0006   009F           00022     MOVWF       ADCON1+0 
+                      00023 ;LED_Matrix.c,61 ::             do{
+0007                  00024 L_main0:
+                      00025 ;LED_Matrix.c,63 ::             for (num=0; num<26; num++) {
+Error[113]  : Symbol not previously defined (_num)
+0007   0180           00026     CLRF        _num+0 
+0008                  00027 L_main3:
+0008   3026           00028     MOVLW       26
+Error[113]  : Symbol not previously defined (_num)
+0009   0200           00029     SUBWF       _num+0, 0 
+000A   1803           00030     BTFSC       STATUS+0, 0 
+000B   2???           00031     GOTO        L_main4
+                      00032 ;LED_Matrix.c,65 ::             for (repeat=0; repeat<100; repeat++){
+Error[113]  : Symbol not previously defined (_repeat)
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+000C   0180           00033     CLRF        _repeat+0 
+000D                  00034 L_main6:
+Warning[202]: Argument out of range.  Least significant bits used.
+000D   3000           00035     MOVLW       100
+Error[113]  : Symbol not previously defined (_repeat)
+000E   0200           00036     SUBWF       _repeat+0, 0 
+000F   1803           00037     BTFSC       STATUS+0, 0 
+0010   2???           00038     GOTO        L_main7
+                      00039 ;LED_Matrix.c,66 ::             column = 1;
+0011   3001           00040     MOVLW       1
+Error[113]  : Symbol not previously defined (_column)
+0012   0080           00041     MOVWF       _column+0 
+                      00042 ;LED_Matrix.c,67 ::             for(count = num*5;count < (num*5+6);count++){
+0013   3005           00043     MOVLW       5
+Warning[207]: Found label after column 1. (MULWF)
+Error[122]  : Illegal opcode (_num)
+0013   3005           00044         MULWF       _num+0 
+Error[113]  : Symbol not previously defined (PRODL)
+0014   0800           00045     MOVF        PRODL+0, 0 
+Error[113]  : Symbol not previously defined (_count)
+0015   0080           00046     MOVWF       _count+0 
+0016                  00047 L_main9:
+0016   3005           00048     MOVLW       5
+Warning[207]: Found label after column 1. (MULWF)
+Error[122]  : Illegal opcode (_num)
+0016   3005           00049         MULWF       _num+0 
+Error[113]  : Symbol not previously defined (PRODL)
+0017   0800           00050     MOVF        PRODL+0, 0 
+Error[113]  : Symbol not previously defined (R0)
+0018   0080           00051     MOVWF       R0 
+Error[113]  : Symbol not previously defined (PRODH)
+0019   0800           00052     MOVF        PRODH+0, 0 
+Error[113]  : Symbol not previously defined (R1)
+001A   0080           00053     MOVWF       R1 
+001B   3006           00054     MOVLW       6
+Error[113]  : Symbol not previously defined (R0)
+001C   0700           00055     ADDWF       R0, 0 
+Error[113]  : Symbol not previously defined (R2)
+001D   0080           00056     MOVWF       R2 
+001E   3000           00057     MOVLW       0
+Warning[207]: Found label after column 1. (ADDWFC)
+Error[122]  : Illegal opcode (R1)
+001E   3000           00058     ADDWFC      R1, 0 
+Error[113]  : Symbol not previously defined (R3)
+001F   0080           00059     MOVWF       R3 
+Warning[202]: Argument out of range.  Least significant bits used.
+0020   3028           00060     MOVLW       128
+Error[113]  : Symbol not previously defined (R0)
+0021   0080           00061     MOVWF       R0 
+Warning[202]: Argument out of range.  Least significant bits used.
+0022   3028           00062     MOVLW       128
+Error[113]  : Symbol not previously defined (R3)
+0023   0600           00063     XORWF       R3, 0 
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[113]  : Symbol not previously defined (R0)
+0024   0200           00064     SUBWF       R0, 0 
+0025   1D03           00065     BTFSS       STATUS+0, 2 
+0026   2???           00066     GOTO        L__main23
+Error[113]  : Symbol not previously defined (R2)
+0027   0800           00067     MOVF        R2, 0 
+Error[113]  : Symbol not previously defined (_count)
+0028   0200           00068     SUBWF       _count+0, 0 
+0029                  00069 L__main23:
+0029   1803           00070     BTFSC       STATUS+0, 0 
+002A   2???           00071     GOTO        L_main10
+                      00072 ;LED_Matrix.c,68 ::             PORTB = Alphabets[count];
+Error[113]  : Symbol not previously defined (_Alphabets)
+002B   3000           00073     MOVLW       _Alphabets+0
+Error[113]  : Symbol not previously defined (FSR0L)
+002C   0080           00074     MOVWF       FSR0L 
+Error[113]  : Symbol not previously defined (hi_addr)
+Error[113]  : Symbol not previously defined (_Alphabets)
+Error[112]  : Missing operator
+002D   3000           00075     MOVLW       hi_addr(_Alphabets+0)
+Error[113]  : Symbol not previously defined (FSR0H)
+002E   0080           00076     MOVWF       FSR0H 
+Error[113]  : Symbol not previously defined (_count)
+002F   0800           00077     MOVF        _count+0, 0 
+Error[113]  : Symbol not previously defined (FSR0L)
+0030   0780           00078     ADDWF       FSR0L, 1 
+0031   1803           00079     BTFSC       STATUS+0, 0 
+Error[113]  : Symbol not previously defined (FSR0H)
+0032   0A80           00080     INCF        FSR0H, 1 
+Error[113]  : Symbol not previously defined (POSTINC0)
+0033   0800           00081     MOVF        POSTINC0+0, 0 
+0034   0086           00082     MOVWF       PORTB+0 
+                      00083 ;LED_Matrix.c,69 ::             PORTA = column;
+Error[113]  : Symbol not previously defined (_column)
+0035   0800           00084     MOVF        _column+0, 0 
+0036   0085           00085     MOVWF       PORTA+0 
+                      00086 ;LED_Matrix.c,70 ::             Delay_ms(1);
+0037   3016           00087     MOVLW       16
+Error[113]  : Symbol not previously defined (R12)
+Error[108]  : Illegal character (,)
+0038   0080           00088     MOVWF       R12, 0
+Warning[202]: Argument out of range.  Least significant bits used.
+0039   3048           00089     MOVLW       148
+Error[113]  : Symbol not previously defined (R13)
+Error[108]  : Illegal character (,)
+003A   0080           00090     MOVWF       R13, 0
+003B                  00091 L_main12:
+Error[108]  : Illegal character (,)
+Error[113]  : Symbol not previously defined (R13)
+003B   0B00           00092     DECFSZ      R13, 1, 1
+Warning[207]: Found label after column 1. (BRA)
+Error[122]  : Illegal opcode (L_main12)
+003B   0B00           00093     BRA         L_main12
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[108]  : Illegal character (,)
+Error[113]  : Symbol not previously defined (R12)
+003C   0B00           00094     DECFSZ      R12, 1, 1
+Warning[207]: Found label after column 1. (BRA)
+Error[122]  : Illegal opcode (L_main12)
+003C   0B00           00095     BRA         L_main12
+003D   0000           00096     NOP
+                      00097 ;LED_Matrix.c,71 ::             column = column<<1;
+Warning[207]: Found label after column 1. (RLCF)
+Error[122]  : Illegal opcode (_column)
+                      00098         RLCF        _column+0, 1 
+Error[113]  : Symbol not previously defined (_column)
+003E   1000           00099     BCF         _column+0, 0 
+                      00100 ;LED_Matrix.c,67 ::             for(count = num*5;count < (num*5+6);count++){
+Error[113]  : Symbol not previously defined (_count)
+003F   0A80           00101     INCF        _count+0, 1 
+                      00102 ;LED_Matrix.c,72 ::             }
+0040   2???           00103     GOTO        L_main9
+0041                  00104 L_main10:
+                      00105 ;LED_Matrix.c,65 ::             for (repeat=0; repeat<100; repeat++){
+Error[113]  : Symbol not previously defined (_repeat)
+0041   0A80           00106     INCF        _repeat+0, 1 
+                      00107 ;LED_Matrix.c,73 ::             }
+0042   2???           00108     GOTO        L_main6
+0043                  00109 L_main7:
+                      00110 ;LED_Matrix.c,63 ::             for (num=0; num<26; num++) {
+Error[113]  : Symbol not previously defined (_num)
+0043   0A80           00111     INCF        _num+0, 1 
+                      00112 ;LED_Matrix.c,74 ::             }
+0044   2???           00113     GOTO        L_main3
+0045                  00114 L_main4:
+                      00115 ;LED_Matrix.c,77 ::             for (num=0; num<6; num++) {
+Error[113]  : Symbol not previously defined (_num)
+0045   0180           00116     CLRF        _num+0 
+0046                  00117 L_main13:
+0046   3006           00118     MOVLW       6
+Error[113]  : Symbol not previously defined (_num)
+0047   0200           00119     SUBWF       _num+0, 0 
+0048   1803           00120     BTFSC       STATUS+0, 0 
+0049   2???           00121     GOTO        L_main14
+                      00122 ;LED_Matrix.c,79 ::             for (repeat=0; repeat<100; repeat++){
+Error[113]  : Symbol not previously defined (_repeat)
+004A   0180           00123     CLRF        _repeat+0 
+004B                  00124 L_main16:
+Warning[202]: Argument out of range.  Least significant bits used.
+004B   3000           00125     MOVLW       100
+Error[113]  : Symbol not previously defined (_repeat)
+004C   0200           00126     SUBWF       _repeat+0, 0 
+004D   1803           00127     BTFSC       STATUS+0, 0 
+004E   2???           00128     GOTO        L_main17
+                      00129 ;LED_Matrix.c,80 ::             column = 1;
+004F   3001           00130     MOVLW       1
+Error[113]  : Symbol not previously defined (_column)
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0050   0080           00131     MOVWF       _column+0 
+                      00132 ;LED_Matrix.c,81 ::             for(count = num*5;count < (num*5+6);count++){
+0051   3005           00133     MOVLW       5
+Warning[207]: Found label after column 1. (MULWF)
+Error[122]  : Illegal opcode (_num)
+0051   3005           00134         MULWF       _num+0 
+Error[113]  : Symbol not previously defined (PRODL)
+0052   0800           00135     MOVF        PRODL+0, 0 
+Error[113]  : Symbol not previously defined (_count)
+0053   0080           00136     MOVWF       _count+0 
+0054                  00137 L_main19:
+0054   3005           00138     MOVLW       5
+Warning[207]: Found label after column 1. (MULWF)
+Error[122]  : Illegal opcode (_num)
+0054   3005           00139         MULWF       _num+0 
+Error[113]  : Symbol not previously defined (PRODL)
+0055   0800           00140     MOVF        PRODL+0, 0 
+Error[113]  : Symbol not previously defined (R0)
+0056   0080           00141     MOVWF       R0 
+Error[113]  : Symbol not previously defined (PRODH)
+0057   0800           00142     MOVF        PRODH+0, 0 
+Error[113]  : Symbol not previously defined (R1)
+0058   0080           00143     MOVWF       R1 
+0059   3006           00144     MOVLW       6
+Error[113]  : Symbol not previously defined (R0)
+005A   0700           00145     ADDWF       R0, 0 
+Error[113]  : Symbol not previously defined (R2)
+005B   0080           00146     MOVWF       R2 
+005C   3000           00147     MOVLW       0
+Warning[207]: Found label after column 1. (ADDWFC)
+Error[122]  : Illegal opcode (R1)
+005C   3000           00148     ADDWFC      R1, 0 
+Error[113]  : Symbol not previously defined (R3)
+005D   0080           00149     MOVWF       R3 
+Warning[202]: Argument out of range.  Least significant bits used.
+005E   3028           00150     MOVLW       128
+Error[113]  : Symbol not previously defined (R0)
+005F   0080           00151     MOVWF       R0 
+Warning[202]: Argument out of range.  Least significant bits used.
+0060   3028           00152     MOVLW       128
+Error[113]  : Symbol not previously defined (R3)
+0061   0600           00153     XORWF       R3, 0 
+Error[113]  : Symbol not previously defined (R0)
+0062   0200           00154     SUBWF       R0, 0 
+0063   1D03           00155     BTFSS       STATUS+0, 2 
+0064   2???           00156     GOTO        L__main24
+Error[113]  : Symbol not previously defined (R2)
+0065   0800           00157     MOVF        R2, 0 
+Error[113]  : Symbol not previously defined (_count)
+0066   0200           00158     SUBWF       _count+0, 0 
+0067                  00159 L__main24:
+0067   1803           00160     BTFSC       STATUS+0, 0 
+0068   2???           00161     GOTO        L_main20
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00162 ;LED_Matrix.c,82 ::             PORTB = characters[count];
+Error[113]  : Symbol not previously defined (_characters)
+0069   3000           00163     MOVLW       _characters+0
+Error[113]  : Symbol not previously defined (_count)
+006A   0700           00164     ADDWF       _count+0, 0 
+Error[113]  : Symbol not previously defined (TBLPTRL)
+006B   0080           00165     MOVWF       TBLPTRL 
+Error[113]  : Symbol not previously defined (hi_addr)
+Error[113]  : Symbol not previously defined (_characters)
+Error[112]  : Missing operator
+006C   3000           00166     MOVLW       hi_addr(_characters+0)
+Error[113]  : Symbol not previously defined (TBLPTRH)
+006D   0080           00167     MOVWF       TBLPTRH 
+006E   3000           00168     MOVLW       0
+Warning[207]: Found label after column 1. (ADDWFC)
+Error[122]  : Illegal opcode (TBLPTRH)
+006E   3000           00169     ADDWFC      TBLPTRH, 1 
+Error[113]  : Symbol not previously defined (higher_addr)
+Error[113]  : Symbol not previously defined (_characters)
+Error[112]  : Missing operator
+006F   3000           00170     MOVLW       higher_addr(_characters+0)
+Error[113]  : Symbol not previously defined (TBLPTRU)
+0070   0080           00171     MOVWF       TBLPTRU 
+0071   3000           00172     MOVLW       0
+Warning[207]: Found label after column 1. (ADDWFC)
+Error[122]  : Illegal opcode (TBLPTRU)
+0071   3000           00173     ADDWFC      TBLPTRU, 1 
+Warning[207]: Found label after column 1. (TBLRD)
+Error[108]  : Illegal character (*)
+0071   3000           00174         TBLRD*+
+Warning[207]: Found label after column 1. (MOVFF)
+Error[122]  : Illegal opcode (TABLAT)
+0071   3000           00175         MOVFF       TABLAT+0, PORTB+0
+                      00176 ;LED_Matrix.c,83 ::             PORTA = column;
+Error[113]  : Symbol not previously defined (_column)
+0072   0800           00177     MOVF        _column+0, 0 
+0073   0085           00178     MOVWF       PORTA+0 
+                      00179 ;LED_Matrix.c,84 ::             Delay_ms(1);
+0074   3016           00180     MOVLW       16
+Error[113]  : Symbol not previously defined (R12)
+Error[108]  : Illegal character (,)
+0075   0080           00181     MOVWF       R12, 0
+Warning[202]: Argument out of range.  Least significant bits used.
+0076   3048           00182     MOVLW       148
+Error[113]  : Symbol not previously defined (R13)
+Error[108]  : Illegal character (,)
+0077   0080           00183     MOVWF       R13, 0
+0078                  00184 L_main22:
+Error[108]  : Illegal character (,)
+Error[113]  : Symbol not previously defined (R13)
+0078   0B00           00185     DECFSZ      R13, 1, 1
+Warning[207]: Found label after column 1. (BRA)
+Error[122]  : Illegal opcode (L_main22)
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE  7
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0078   0B00           00186     BRA         L_main22
+Error[108]  : Illegal character (,)
+Error[113]  : Symbol not previously defined (R12)
+0079   0B00           00187     DECFSZ      R12, 1, 1
+Warning[207]: Found label after column 1. (BRA)
+Error[122]  : Illegal opcode (L_main22)
+0079   0B00           00188     BRA         L_main22
+007A   0000           00189     NOP
+                      00190 ;LED_Matrix.c,85 ::             column = column<<1;
+Warning[207]: Found label after column 1. (RLCF)
+Error[122]  : Illegal opcode (_column)
+                      00191         RLCF        _column+0, 1 
+Error[113]  : Symbol not previously defined (_column)
+007B   1000           00192     BCF         _column+0, 0 
+                      00193 ;LED_Matrix.c,81 ::             for(count = num*5;count < (num*5+6);count++){
+Error[113]  : Symbol not previously defined (_count)
+007C   0A80           00194     INCF        _count+0, 1 
+                      00195 ;LED_Matrix.c,86 ::             }
+007D   2???           00196     GOTO        L_main19
+007E                  00197 L_main20:
+                      00198 ;LED_Matrix.c,79 ::             for (repeat=0; repeat<100; repeat++){
+Error[113]  : Symbol not previously defined (_repeat)
+007E   0A80           00199     INCF        _repeat+0, 1 
+                      00200 ;LED_Matrix.c,87 ::             }
+007F   2???           00201     GOTO        L_main16
+0080                  00202 L_main17:
+                      00203 ;LED_Matrix.c,77 ::             for (num=0; num<6; num++) {
+Error[113]  : Symbol not previously defined (_num)
+0080   0A80           00204     INCF        _num+0, 1 
+                      00205 ;LED_Matrix.c,88 ::             }
+0081   2???           00206     GOTO        L_main13
+0082                  00207 L_main14:
+                      00208 ;LED_Matrix.c,90 ::             } while(1);
+0082   2???           00209     GOTO        L_main0
+                      00210 ;LED_Matrix.c,92 ::             }
+0083   2???           00211     GOTO        $+0
+                      00212 ; end of _main
+Error[129]  : Expected (END)
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE  8
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADCS2                             00000006
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BRGH                              00000002
+C                                 00000000
+C1INV                             00000004
+C1OUT                             00000006
+C2INV                             00000005
+C2OUT                             00000007
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1                             00000015
+CCPR1H                            00000016
+CCPR1L                            00000015
+CCPR2                             0000001B
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CHS0                              00000003
+CHS1                              00000004
+CHS2                              00000005
+CIS                               00000003
+CKE                               00000006
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CKP                               00000004
+CM0                               00000000
+CM1                               00000001
+CM2                               00000002
+CMCON                             0000009C
+CMIE                              00000006
+CMIF                              00000006
+CREN                              00000004
+CSRC                              00000007
+CVR0                              00000000
+CVR1                              00000001
+CVR2                              00000002
+CVR3                              00000003
+CVRCON                            0000009D
+CVREN                             00000007
+CVROE                             00000006
+CVRR                              00000005
+D                                 00000005
+DATA_ADDRESS                      00000005
+DC                                00000001
+D_A                               00000005
+D_NOT_A                           00000005
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+F                                 00000001
+FERR                              00000002
+FSR                               00000004
+GCEN                              00000007
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+GO_NOT_DONE                       00000002
+I2C_DATA                          00000005
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+L__main23                         00000029
+L__main24                         00000067
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE 10
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+L_main0                           00000007
+L_main10                          00000041
+L_main12                          0000003B
+L_main13                          00000046
+L_main14                          00000082
+L_main16                          0000004B
+L_main17                          00000080
+L_main19                          00000054
+L_main20                          0000007E
+L_main22                          00000078
+L_main3                           00000008
+L_main4                           00000045
+L_main6                           0000000D
+L_main7                           00000043
+L_main9                           00000016
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+OBF                               00000006
+OERR                              00000001
+OPTION_REG                        00000081
+P                                 00000004
+PCFG0                             00000000
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PEIE                              00000006
+PEN                               00000002
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PS0                               00000000
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE 11
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+PSPIF                             00000007
+PSPMODE                           00000004
+R                                 00000002
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RA5                               00000005
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+RC6                               00000006
+RC7                               00000007
+RC8_9                             00000006
+RC9                               00000006
+RCD8                              00000000
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+RD                                00000000
+RD0                               00000000
+RD1                               00000001
+RD2                               00000002
+RD3                               00000003
+RD4                               00000004
+RD5                               00000005
+RD6                               00000006
+RD7                               00000007
+RE0                               00000000
+RE1                               00000001
+RE2                               00000002
+READ_WRITE                        00000002
+RP0                               00000005
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE 12
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+R_NOT_W                           00000002
+R_W                               00000002
+S                                 00000003
+SAYAC1                            00000020
+SAYAC2                            00000021
+SAYAC3                            00000022
+SEN                               00000000
+SMP                               00000007
+SPBRG                             00000099
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPCON2                           00000091
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+SSPOV                             00000006
+SSPSTAT                           00000094
+STATUS                            00000003
+SYNC                              00000004
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1                              0000000E
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE 13
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISA5                            00000005
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TRISC                             00000087
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+TRISC6                            00000006
+TRISC7                            00000007
+TRISD                             00000088
+TRISD0                            00000000
+TRISD1                            00000001
+TRISD2                            00000002
+TRISD3                            00000003
+TRISD4                            00000004
+TRISD5                            00000005
+TRISD6                            00000006
+TRISD7                            00000007
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+TXEN                              00000005
+TXIE                              00000004
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE 14
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TXIF                              00000004
+TXREG                             00000019
+TXSTA                             00000098
+UA                                00000001
+W                                 00000000
+WCOL                              00000007
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_.org_0_0083                      00000083
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_BOREN_OFF                        00003FBF
+_BOREN_ON                         00003FFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00001FFF
+_CP_OFF                           00003FFF
+_CP_ON                            00001FFF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_1FOURTH                      00003BFF
+_WRT_256                          00003DFF
+_WRT_HALF                         000039FF
+_WRT_OFF                          00003FFF
+_XT_OSC                           00003FFD
+__16F877A                         00000001
+_main                             00000000
+
+MPASM 5.68                    5_7_MATRIX.ASM   11-30-2016  0:42:41         PAGE 15
+
+
+
+
+
+Errors   :   102
+Warnings :    28 reported,     0 suppressed
+Messages :     4 reported,     0 suppressed
+
+

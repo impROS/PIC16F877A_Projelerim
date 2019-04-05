@@ -1,0 +1,8 @@
+Warning[205] D:\PROJE_ASM\KESME_KAYAN_LED.X\KESME_KAYAN_LED.ASM 1 : Found directive in column 1. (list)
+Warning[207] D:\PROJE_ASM\KESME_KAYAN_LED.X\KESME_KAYAN_LED.ASM 4 : Found label after column 1. (SAY1)
+Warning[207] D:\PROJE_ASM\KESME_KAYAN_LED.X\KESME_KAYAN_LED.ASM 5 : Found label after column 1. (SAY2)
+Message[302] D:\PROJE_ASM\KESME_KAYAN_LED.X\KESME_KAYAN_LED.ASM 23 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\PROJE_ASM\KESME_KAYAN_LED.X\KESME_KAYAN_LED.ASM 27 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\PROJE_ASM\KESME_KAYAN_LED.X\KESME_KAYAN_LED.ASM 31 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] D:\PROJE_ASM\KESME_KAYAN_LED.X\KESME_KAYAN_LED.ASM 45 : Using default destination of 1 (file).
+Message[305] D:\PROJE_ASM\KESME_KAYAN_LED.X\KESME_KAYAN_LED.ASM 47 : Using default destination of 1 (file).

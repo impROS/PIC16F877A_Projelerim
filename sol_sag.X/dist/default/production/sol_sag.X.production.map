@@ -1,0 +1,42 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Tue Oct 18 03:59:44 2016
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000032
+                   .cinit    romdata   0x000019    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/SOL_SAG       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00001a      
+                            0x002007    0x002007      
+            28 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000001    program     static D:\proje_asm\sol_sag.X\sol_sag.asm
+                       j1   0x000008    program     static D:\proje_asm\sol_sag.X\sol_sag.asm
+                       z0   0x000012    program     static D:\proje_asm\sol_sag.X\sol_sag.asm
+                       z1   0x000014    program     static D:\proje_asm\sol_sag.X\sol_sag.asm
+                    zaman   0x000010    program     static D:\proje_asm\sol_sag.X\sol_sag.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000001    program     static D:\proje_asm\sol_sag.X\sol_sag.asm
+                       j1   0x000008    program     static D:\proje_asm\sol_sag.X\sol_sag.asm
+                    zaman   0x000010    program     static D:\proje_asm\sol_sag.X\sol_sag.asm
+                       z0   0x000012    program     static D:\proje_asm\sol_sag.X\sol_sag.asm
+                       z1   0x000014    program     static D:\proje_asm\sol_sag.X\sol_sag.asm
+
+

@@ -1,0 +1,4 @@
+Warning[205] D:\PROJE_ASM\8_8_MATRIX.X\8_8_MATRIX.ASM 3 : Found directive in column 1. (list)
+Message[302] D:\PROJE_ASM\8_8_MATRIX.X\8_8_MATRIX.ASM 25 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\PROJE_ASM\8_8_MATRIX.X\8_8_MATRIX.ASM 30 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\PROJE_ASM\8_8_MATRIX.X\8_8_MATRIX.ASM 32 : Register in operand not in bank 0.  Ensure that bank bits are correct.

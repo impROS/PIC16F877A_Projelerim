@@ -1,0 +1,14 @@
+Warning[205] D:\PROJE_ASM\4_SAYMA_ALG_DENE.X\4_SAYMA_ALG_DENE.ASM 1 : Found directive in column 1. (LIST)
+Warning[207] D:\PROJE_ASM\4_SAYMA_ALG_DENE.X\4_SAYMA_ALG_DENE.ASM 4 : Found label after column 1. (SAY_O)
+Warning[207] D:\PROJE_ASM\4_SAYMA_ALG_DENE.X\4_SAYMA_ALG_DENE.ASM 5 : Found label after column 1. (SAY_1)
+Warning[207] D:\PROJE_ASM\4_SAYMA_ALG_DENE.X\4_SAYMA_ALG_DENE.ASM 6 : Found label after column 1. (SAY_2)
+Warning[207] D:\PROJE_ASM\4_SAYMA_ALG_DENE.X\4_SAYMA_ALG_DENE.ASM 7 : Found label after column 1. (SAY_S)
+Message[302] D:\PROJE_ASM\4_SAYMA_ALG_DENE.X\4_SAYMA_ALG_DENE.ASM 12 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] D:\PROJE_ASM\4_SAYMA_ALG_DENE.X\4_SAYMA_ALG_DENE.ASM 18 : Found label after column 1. (E_0)
+Warning[207] D:\PROJE_ASM\4_SAYMA_ALG_DENE.X\4_SAYMA_ALG_DENE.ASM 25 : Found label after column 1. (E_1)
+Message[305] D:\PROJE_ASM\4_SAYMA_ALG_DENE.X\4_SAYMA_ALG_DENE.ASM 30 : Using default destination of 1 (file).
+Warning[207] D:\PROJE_ASM\4_SAYMA_ALG_DENE.X\4_SAYMA_ALG_DENE.ASM 34 : Found label after column 1. (BEKLE)
+Warning[207] D:\PROJE_ASM\4_SAYMA_ALG_DENE.X\4_SAYMA_ALG_DENE.ASM 38 : Found label after column 1. (D0)
+Warning[207] D:\PROJE_ASM\4_SAYMA_ALG_DENE.X\4_SAYMA_ALG_DENE.ASM 42 : Found label after column 1. (D1)
+Message[305] D:\PROJE_ASM\4_SAYMA_ALG_DENE.X\4_SAYMA_ALG_DENE.ASM 43 : Using default destination of 1 (file).
+Message[305] D:\PROJE_ASM\4_SAYMA_ALG_DENE.X\4_SAYMA_ALG_DENE.ASM 45 : Using default destination of 1 (file).

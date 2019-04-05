@@ -1,0 +1,38 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Thu Dec 01 03:12:46 2016
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000084
+                   .cinit    romdata   0x000042    program   0x000004
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000043      
+            68 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    begin   0x000009    program     static D:\proje_asm\8_8_matrix.X\8_8_matrix.asm
+                    delay   0x00003a    program     static D:\proje_asm\8_8_matrix.X\8_8_matrix.asm
+               delay_loop   0x00003d    program     static D:\proje_asm\8_8_matrix.X\8_8_matrix.asm
+                    setup   0x000008    program     static D:\proje_asm\8_8_matrix.X\8_8_matrix.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    setup   0x000008    program     static D:\proje_asm\8_8_matrix.X\8_8_matrix.asm
+                    begin   0x000009    program     static D:\proje_asm\8_8_matrix.X\8_8_matrix.asm
+                    delay   0x00003a    program     static D:\proje_asm\8_8_matrix.X\8_8_matrix.asm
+               delay_loop   0x00003d    program     static D:\proje_asm\8_8_matrix.X\8_8_matrix.asm
+
+

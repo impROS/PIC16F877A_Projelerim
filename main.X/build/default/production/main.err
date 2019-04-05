@@ -1,0 +1,9 @@
+Warning[205] D:\PROJE_ASM\MAIN.X\MAIN.ASM 2 : Found directive in column 1. (LIST)
+Warning[207] D:\PROJE_ASM\MAIN.X\MAIN.ASM 4 : Found label after column 1. (R0)
+Warning[207] D:\PROJE_ASM\MAIN.X\MAIN.ASM 5 : Found label after column 1. (R1)
+Warning[207] D:\PROJE_ASM\MAIN.X\MAIN.ASM 6 : Found label after column 1. (R2)
+Message[302] D:\PROJE_ASM\MAIN.X\MAIN.ASM 10 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\PROJE_ASM\MAIN.X\MAIN.ASM 12 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] D:\PROJE_ASM\MAIN.X\MAIN.ASM 14 : Found label after column 1. (BASLA)
+Warning[207] D:\PROJE_ASM\MAIN.X\MAIN.ASM 77 : Found label after column 1. (D1)
+Warning[207] D:\PROJE_ASM\MAIN.X\MAIN.ASM 82 : Found label after column 1. (ZAMAN)

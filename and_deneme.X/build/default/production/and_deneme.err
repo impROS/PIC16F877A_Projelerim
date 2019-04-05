@@ -1,0 +1,8 @@
+Warning[205] D:\PROJE_ASM\AND_DENEME.X\AND_DENEME.ASM 1 : Found directive in column 1. (list)
+Warning[207] D:\PROJE_ASM\AND_DENEME.X\AND_DENEME.ASM 3 : Found label after column 1. (DENEME)
+Warning[207] D:\PROJE_ASM\AND_DENEME.X\AND_DENEME.ASM 4 : Found label after column 1. (SAY1)
+Warning[207] D:\PROJE_ASM\AND_DENEME.X\AND_DENEME.ASM 5 : Found label after column 1. (SAY2)
+Message[302] D:\PROJE_ASM\AND_DENEME.X\AND_DENEME.ASM 8 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] D:\PROJE_ASM\AND_DENEME.X\AND_DENEME.ASM 16 : Found label after column 1. (d1)
+Message[305] D:\PROJE_ASM\AND_DENEME.X\AND_DENEME.ASM 31 : Using default destination of 1 (file).
+Message[305] D:\PROJE_ASM\AND_DENEME.X\AND_DENEME.ASM 33 : Using default destination of 1 (file).

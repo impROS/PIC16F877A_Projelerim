@@ -1,0 +1,58 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Sun Nov 20 07:27:18 2016
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000080
+                   .cinit    romdata   0x000040    program   0x000004
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000041      
+            66 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      E11   0x00000c    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                      E_0   0x000028    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                      E_1   0x00002a    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                     E_11   0x000035    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                      E_2   0x00002c    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                     E_22   0x000037    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                     E_33   0x000039    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+            GECIK_KIRMIZI   0x000026    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+               GECIK_SARI   0x000019    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+              GECIK_YESIL   0x000033    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+             PORT_TEMIZLE   0x000016    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                       Z1   0x00001d    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                       Z2   0x00001f    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                      Z_0   0x00001b    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      E11   0x00000c    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+             PORT_TEMIZLE   0x000016    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+               GECIK_SARI   0x000019    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                      Z_0   0x00001b    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                       Z1   0x00001d    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                       Z2   0x00001f    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+            GECIK_KIRMIZI   0x000026    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                      E_0   0x000028    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                      E_1   0x00002a    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                      E_2   0x00002c    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+              GECIK_YESIL   0x000033    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                     E_11   0x000035    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                     E_22   0x000037    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+                     E_33   0x000039    program     static D:\proje_asm\trafik_lambasi.X\trafik_lambasi.asm
+
+

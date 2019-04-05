@@ -1,0 +1,50 @@
+list p=16f877a
+    #include <P16F877A.INC>
+    __CONFIG H'2F01'
+          SAY1 EQU 0X021
+    SAY2 EQU 0X022
+    ORG 0X00
+    GOTO ANAPROGRAM
+    ORG 0X04
+    
+    BCF INTCON,INTF
+    BANKSEL PORTD
+    INCF PORTD,1
+    CALL DELAY
+    GOTO 0X04
+    RETFIE
+    
+ANAPROGRAM:
+    
+    BANKSEL PORTD
+    CLRF PORTD
+    BANKSEL TRISB
+    MOVLW H'01'
+    MOVWF TRISB
+    
+    MOVLW B'11010000'
+    MOVWF INTCON
+    CLRF TRISD
+    
+    BANKSEL ADCON1
+    MOVLW H'06'
+    MOVWF ADCON1
+    
+DONGU:
+    GOTO DONGU
+    
+        
+    ;ZAMANLAYICI
+DELAY:
+    MOVLW .255
+    MOVWF SAY1
+    
+    MOVLW .255
+    MOVFW SAY2
+    
+    DECFSZ SAY2
+    GOTO $-1
+    DECFSZ SAY1
+    GOTO $-5
+    RETURN
+    END

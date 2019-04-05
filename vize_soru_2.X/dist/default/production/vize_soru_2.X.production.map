@@ -1,0 +1,38 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Thu Nov 17 03:17:42 2016
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000022
+                   .cinit    romdata   0x000011    program   0x000004
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000012      
+            19 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    DELAY   0x000008    program     static D:\proje_asm\vize_soru_2.X\a_bas_b_yan.asm
+             _.org_0_0007   0x000007    program     static D:\proje_asm\vize_soru_2.X\a_bas_b_yan.asm
+             _.org_0_000D   0x00000d    program     static D:\proje_asm\vize_soru_2.X\a_bas_b_yan.asm
+             _.org_0_000F   0x00000f    program     static D:\proje_asm\vize_soru_2.X\a_bas_b_yan.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+             _.org_0_0007   0x000007    program     static D:\proje_asm\vize_soru_2.X\a_bas_b_yan.asm
+                    DELAY   0x000008    program     static D:\proje_asm\vize_soru_2.X\a_bas_b_yan.asm
+             _.org_0_000D   0x00000d    program     static D:\proje_asm\vize_soru_2.X\a_bas_b_yan.asm
+             _.org_0_000F   0x00000f    program     static D:\proje_asm\vize_soru_2.X\a_bas_b_yan.asm
+
+

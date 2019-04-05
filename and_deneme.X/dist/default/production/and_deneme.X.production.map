@@ -1,0 +1,38 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Thu Nov 10 16:26:34 2016
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000030
+                   .cinit    romdata   0x000018    program   0x000004
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000019      
+            26 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    DELAY   0x00000f    program     static D:\proje_asm\and_deneme.X\and_deneme.asm
+             _.org_0_0014   0x000014    program     static D:\proje_asm\and_deneme.X\and_deneme.asm
+             _.org_0_0016   0x000016    program     static D:\proje_asm\and_deneme.X\and_deneme.asm
+                       d1   0x000008    program     static D:\proje_asm\and_deneme.X\and_deneme.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                       d1   0x000008    program     static D:\proje_asm\and_deneme.X\and_deneme.asm
+                    DELAY   0x00000f    program     static D:\proje_asm\and_deneme.X\and_deneme.asm
+             _.org_0_0014   0x000014    program     static D:\proje_asm\and_deneme.X\and_deneme.asm
+             _.org_0_0016   0x000016    program     static D:\proje_asm\and_deneme.X\and_deneme.asm
+
+

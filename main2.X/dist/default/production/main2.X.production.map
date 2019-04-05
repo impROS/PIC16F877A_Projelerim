@@ -1,0 +1,44 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Wed Oct 26 12:21:51 2016
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000040
+                   .cinit    romdata   0x000020    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/MAÝN.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000021      
+                            0x002007    0x002007      
+            35 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000001    program     static D:\proje_asm\main2.X\MAÝN.asm
+                       j1   0x000008    program     static D:\proje_asm\main2.X\MAÝN.asm
+                       j2   0x00000f    program     static D:\proje_asm\main2.X\MAÝN.asm
+                       z0   0x000019    program     static D:\proje_asm\main2.X\MAÝN.asm
+                       z1   0x00001b    program     static D:\proje_asm\main2.X\MAÝN.asm
+                    zaman   0x000017    program     static D:\proje_asm\main2.X\MAÝN.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000001    program     static D:\proje_asm\main2.X\MAÝN.asm
+                       j1   0x000008    program     static D:\proje_asm\main2.X\MAÝN.asm
+                       j2   0x00000f    program     static D:\proje_asm\main2.X\MAÝN.asm
+                    zaman   0x000017    program     static D:\proje_asm\main2.X\MAÝN.asm
+                       z0   0x000019    program     static D:\proje_asm\main2.X\MAÝN.asm
+                       z1   0x00001b    program     static D:\proje_asm\main2.X\MAÝN.asm
+
+

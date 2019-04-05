@@ -1,0 +1,2 @@
+Warning[205] D:\PROJE_ASM\STEP.X\STEP.ASM 4 : Found directive in column 1. (list)
+Message[302] D:\PROJE_ASM\STEP.X\STEP.ASM 19 : Register in operand not in bank 0.  Ensure that bank bits are correct.

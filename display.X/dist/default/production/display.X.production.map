@@ -1,0 +1,46 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Sun Nov 20 07:41:09 2016
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000058
+                   .cinit    romdata   0x00002c    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/DISPLAY       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00002d      
+                            0x002007    0x002007      
+            47 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000001    program     static D:\proje_asm\display.X\display.asm
+                       Z0   0x000025    program     static D:\proje_asm\display.X\display.asm
+                       Z1   0x000027    program     static D:\proje_asm\display.X\display.asm
+                       j1   0x00000a    program     static D:\proje_asm\display.X\display.asm
+                       j2   0x000006    program     static D:\proje_asm\display.X\display.asm
+                    liste   0x000012    program     static D:\proje_asm\display.X\display.asm
+                    zaman   0x000023    program     static D:\proje_asm\display.X\display.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000001    program     static D:\proje_asm\display.X\display.asm
+                       j2   0x000006    program     static D:\proje_asm\display.X\display.asm
+                       j1   0x00000a    program     static D:\proje_asm\display.X\display.asm
+                    liste   0x000012    program     static D:\proje_asm\display.X\display.asm
+                    zaman   0x000023    program     static D:\proje_asm\display.X\display.asm
+                       Z0   0x000025    program     static D:\proje_asm\display.X\display.asm
+                       Z1   0x000027    program     static D:\proje_asm\display.X\display.asm
+
+

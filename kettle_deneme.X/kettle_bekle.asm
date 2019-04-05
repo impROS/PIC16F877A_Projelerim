@@ -1,0 +1,60 @@
+LIST P = 16F877A
+    INCLUDE<P16F877A.INC>
+
+        SAY1 EQU H'020'
+        SAY2 EQU H'021'
+
+        SAY_1 EQU H'022'
+        SAY_2 EQU H'023'
+        SAY_3 EQU H'024'
+
+        KIRMIZI EQU H'026'
+
+
+    ORG 0X00
+
+
+    BANKSEL TRISB
+    CLRF TRISB
+
+    BANKSEL PORTB
+    CLRF PORTB
+
+
+    MOVLW b'11111111'
+    MOVWF KIRMIZI
+
+; //////
+E11 MOVFW KIRMIZI
+    MOVWF PORTB
+    CALL GECIK_KIRMIZI
+
+    MOVLW b'00000000'
+    MOVWF PORTB
+    CALL GECIK_KIRMIZI
+    GOTO E11
+
+
+;YAKLASIK 9 SANiYE
+GECIK_KIRMIZI
+    MOVLW .60
+    MOVWF SAY_1
+
+        E_0 MOVLW .255
+    MOVWF SAY_2
+
+        E_1 MOVLW .255
+    MOVWF SAY_3
+        E_2 DECFSZ SAY_3, F
+    GOTO E_2
+    DECFSZ SAY_2, F
+    GOTO E_1
+    DECFSZ SAY_1, F
+    GOTO E_0
+    RETURN
+    END
+
+
+
+
+

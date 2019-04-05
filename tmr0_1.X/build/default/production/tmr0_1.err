@@ -1,0 +1,4 @@
+Warning[205] D:\PROJE_ASM\TMR0_1.X\TMR0_1.ASM 4 : Found directive in column 1. (LIST)
+Warning[207] D:\PROJE_ASM\TMR0_1.X\TMR0_1.ASM 6 : Found label after column 1. (DEGER)
+Message[302] D:\PROJE_ASM\TMR0_1.X\TMR0_1.ASM 16 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\PROJE_ASM\TMR0_1.X\TMR0_1.ASM 20 : Register in operand not in bank 0.  Ensure that bank bits are correct.

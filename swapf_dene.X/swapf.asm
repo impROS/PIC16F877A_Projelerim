@@ -1,0 +1,34 @@
+list p=16f877a
+    INCLUDE<P16F877A.INC>
+    SAY1 EQU 0X020
+    SAY2 EQU 0X021
+    ORG 0X00
+    
+    BANKSEL TRISB
+    CLRF TRISB
+    
+    BANKSEL PORTB
+    CLRF PORTB
+    
+    MOVLW .3
+    MOVWF PORTB
+    
+BASLA:
+    SWAPF PORTB
+    CALL BEKLEME
+    GOTO $ -2
+    
+    BEKLEME
+    MOVLW .255
+    MOVWF SAY1
+    
+    MOVLW .255
+    MOVWF SAY2
+    
+    DECFSZ SAY2
+    GOTO $-1
+    DECFSZ SAY1
+    GOTO $-5
+    END
+
+

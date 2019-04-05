@@ -1,0 +1,11 @@
+Warning[205] D:\PROJE_ASM\KAYMA_DENEME.X\KAYMA_DENEME.ASM 1 : Found directive in column 1. (LIST)
+Warning[207] D:\PROJE_ASM\KAYMA_DENEME.X\KAYMA_DENEME.ASM 3 : Found label after column 1. (SAY)
+Warning[207] D:\PROJE_ASM\KAYMA_DENEME.X\KAYMA_DENEME.ASM 4 : Found label after column 1. (SAY2)
+Message[302] D:\PROJE_ASM\KAYMA_DENEME.X\KAYMA_DENEME.ASM 8 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Error[121]   D:\PROJE_ASM\KAYMA_DENEME.X\KAYMA_DENEME.ASM 19 : Illegal label (D1)
+Warning[202] D:\PROJE_ASM\KAYMA_DENEME.X\KAYMA_DENEME.ASM 20 : Argument out of range.  Least significant bits used.
+Warning[202] D:\PROJE_ASM\KAYMA_DENEME.X\KAYMA_DENEME.ASM 22 : Argument out of range.  Least significant bits used.
+Warning[202] D:\PROJE_ASM\KAYMA_DENEME.X\KAYMA_DENEME.ASM 25 : Argument out of range.  Least significant bits used.
+Message[305] D:\PROJE_ASM\KAYMA_DENEME.X\KAYMA_DENEME.ASM 30 : Using default destination of 1 (file).
+Error[113]   D:\PROJE_ASM\KAYMA_DENEME.X\KAYMA_DENEME.ASM 31 : Symbol not previously defined (D1)
+Error[113]   D:\PROJE_ASM\KAYMA_DENEME.X\KAYMA_DENEME.ASM 39 : Symbol not previously defined (D1)

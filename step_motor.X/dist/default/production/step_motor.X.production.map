@@ -1,0 +1,42 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Mon Nov 07 22:50:27 2016
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000050
+                   .cinit    romdata   0x000028    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/STEP_MO       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000029      
+                            0x002007    0x002007      
+            43 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000001    program     static D:\proje_asm\step_motor.X\step_motor.asm
+                       j1   0x000006    program     static D:\proje_asm\step_motor.X\step_motor.asm
+                       z0   0x000021    program     static D:\proje_asm\step_motor.X\step_motor.asm
+                       z1   0x000023    program     static D:\proje_asm\step_motor.X\step_motor.asm
+                    zaman   0x00001f    program     static D:\proje_asm\step_motor.X\step_motor.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000001    program     static D:\proje_asm\step_motor.X\step_motor.asm
+                       j1   0x000006    program     static D:\proje_asm\step_motor.X\step_motor.asm
+                    zaman   0x00001f    program     static D:\proje_asm\step_motor.X\step_motor.asm
+                       z0   0x000021    program     static D:\proje_asm\step_motor.X\step_motor.asm
+                       z1   0x000023    program     static D:\proje_asm\step_motor.X\step_motor.asm
+
+

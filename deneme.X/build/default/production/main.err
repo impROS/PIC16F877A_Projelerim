@@ -1,0 +1,9 @@
+Warning[205] D:\PROJE_ASM\DENEME.X\MAIN.ASM 1 : Found directive in column 1. (LIST)
+Warning[207] D:\PROJE_ASM\DENEME.X\MAIN.ASM 4 : Found label after column 1. (SAY1)
+Warning[207] D:\PROJE_ASM\DENEME.X\MAIN.ASM 5 : Found label after column 1. (R0)
+Warning[207] D:\PROJE_ASM\DENEME.X\MAIN.ASM 6 : Found label after column 1. (R1)
+Message[302] D:\PROJE_ASM\DENEME.X\MAIN.ASM 11 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] D:\PROJE_ASM\DENEME.X\MAIN.ASM 20 : Found label after column 1. (BASLA)
+Warning[207] D:\PROJE_ASM\DENEME.X\MAIN.ASM 27 : Found label after column 1. (BEKLE)
+Warning[207] D:\PROJE_ASM\DENEME.X\MAIN.ASM 30 : Found label after column 1. (D1)
+Warning[207] D:\PROJE_ASM\DENEME.X\MAIN.ASM 33 : Found label after column 1. (D2)

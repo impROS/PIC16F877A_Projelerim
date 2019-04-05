@@ -1,0 +1,3 @@
+Warning[205] D:\PROJE_ASM\DECIMAL_SAYAC.X\DECIMAL.ASM 1 : Found directive in column 1. (list)
+Message[302] D:\PROJE_ASM\DECIMAL_SAYAC.X\DECIMAL.ASM 18 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[205] D:\PROJE_ASM\DECIMAL_SAYAC.X\DECIMAL.ASM 57 : Found directive in column 1. (end)
